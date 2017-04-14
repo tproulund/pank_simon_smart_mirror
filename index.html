@@ -16,6 +16,12 @@
     p {color:white;}
     
 </style>
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>-->
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.flipcountdown.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery.flipcountdown.css" />
+
 </head>
 
 <body>
@@ -23,12 +29,61 @@
 <p>basic text place</p>
 <h2>Title 2</h2>
 
+
 <!-- weather widget start --><a target="_blank" href="http://ibooked.dk/weather/aalborg-7110"><img src="https://w.bookcdn.com/weather/picture/32_7110_1_12_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=w209&anc_id=99495"  alt="booked.net"/></a><!-- weather widget end -->
 <p>
- <iframe width="400" height="280" src="https://w2.countingdownto.com/1784087" frameborder="0"></iframe>
-    </p>
-<p>
-    <iframe width="400" height="280" src="https://w2.countingdownto.com/1784089" frameborder="0"></iframe>
+<div id="main">
+
+	<h3>Master Thesis Handin Deadline</h3>
+	<table style="border:0px;">
+		<tr>
+			<td style="width:110px;text-align:center;color: white;">Days</td>
+			<td style="width:120px;text-align:center;color: white;">Hours</td>
+			<td style="width:110px;text-align:center;color: white;">Minutes</td>
+			<td style="width:120px;text-align:center;color: white;">Seconds</td>
+		</tr>
+		<tr>
+			<td colspan="4"><span id="deadline"></span></td>
+		</tr>
+	</table>
+	
+	
+	<script>
+jQuery(function(){
+ jQuery('#deadline').flipcountdown({  
+  size:'lg',
+  beforeDateTime:'06/02/2017' + ' 08:00:00'
+ });
+});
+	</script>
+
+</div>
+<div id="main">
+
+	<h3>Time to Friday</h3>
+	<table style="border:0px;">
+		<tr>
+			<td style="width:110px;text-align:center;color: white;">Days</td>
+			<td style="width:120px;text-align:center;color: white;">Hours</td>
+			<td style="width:110px;text-align:center;color: white;">Minutes</td>
+			<td style="width:120px;text-align:center;color: white;">Seconds</td>
+		</tr>
+		<tr>
+			<td colspan="4"><span id="friday"></span></td>
+		</tr>
+	</table>
+	
+	
+	<script>
+jQuery(function(){
+ jQuery('#friday').flipcountdown({  
+  size:'lg',
+  beforeDateTime:'04/21/2017' + ' 08:00:00'
+ });
+});
+	</script>
+
+</div>
     </p>
     </body>
 </html>
